@@ -64,7 +64,7 @@ def buy(item_id):
         balance_result = cursor.fetchone()
 
         if quantity_result and quantity_result[0] > 0 and item_result and balance_result:
-            название, цена = item_result
+            название, цена = item_result # лучше не использовать русские названия для переменные name,price будет лучше для Python
             balance = balance_result[0]
 
             if balance >= цена:
